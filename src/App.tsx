@@ -4,6 +4,10 @@ import "react-notion/src/styles.css";
 import Loading from "@/components/Loading";
 import NoData from "@/components/NoData";
 import useFetch from "@/hooks/useFetch";
+// Import the language you need
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-python";
+import "prismjs/themes/prism-tomorrow.css";
 
 import "./App.css";
 
