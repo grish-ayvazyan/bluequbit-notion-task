@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "start-server": "node server/server.cjs",
         "build": "tsc -b && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
@@ -13,8 +14,10 @@
         "prepare": "husky"
     },
     "dependencies": {
+        "path": "^0.12.7",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-notion": "^0.10.0"
     },
     "devDependencies": {
         "@commitlint/cli": "19.2.0",
@@ -31,8 +34,8 @@
         "eslint-plugin-react-hooks": "^4.6.2",
         "husky": "^9.1.5",
         "lint-staged": "15.2.2",
-        "pretty-quick": "4.0.0",
         "prettier": "^3.3.3",
+        "pretty-quick": "4.0.0",
         "typescript": "^5.2.2",
         "vite": "^5.3.1"
     }

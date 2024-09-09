@@ -5,12 +5,18 @@ settings:
     excludeLinksFromLockfile: false
 
 dependencies:
+    path:
+        specifier: ^0.12.7
+        version: 0.12.7
     react:
         specifier: ^18.3.1
         version: 18.3.1
     react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+    react-notion:
+        specifier: ^0.10.0
+        version: 0.10.0(react@18.3.1)
 
 devDependencies:
     "@commitlint/cli":
@@ -2610,6 +2616,13 @@ packages:
             wrappy: 1.0.2
         dev: true
 
+    /inherits@2.0.3:
+        resolution:
+            {
+                integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==,
+            }
+        dev: false
+
     /inherits@2.0.4:
         resolution:
             {
@@ -3320,6 +3333,16 @@ packages:
         engines: { node: ">=8" }
         dev: true
 
+    /path@0.12.7:
+        resolution:
+            {
+                integrity: sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==,
+            }
+        dependencies:
+            process: 0.11.10
+            util: 0.10.4
+        dev: false
+
     /picocolors@1.1.0:
         resolution:
             {
@@ -3411,6 +3434,22 @@ packages:
             tslib: 2.7.0
         dev: true
 
+    /prismjs@1.29.0:
+        resolution:
+            {
+                integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==,
+            }
+        engines: { node: ">=6" }
+        dev: false
+
+    /process@0.11.10:
+        resolution:
+            {
+                integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==,
+            }
+        engines: { node: ">= 0.6.0" }
+        dev: false
+
     /punycode@2.3.1:
         resolution:
             {
@@ -3437,6 +3476,19 @@ packages:
             loose-envify: 1.4.0
             react: 18.3.1
             scheduler: 0.23.2
+        dev: false
+
+    /react-notion@0.10.0(react@18.3.1):
+        resolution:
+            {
+                integrity: sha512-i5lVAxzSs7GnTpIbKtivPQWxGZiKCO5xmCmMJyn6F91y8X1IIJqnypkK+31F2acb1l1Qd8Yv0ktuvXwz9g49NQ==,
+            }
+        engines: { node: ">=10" }
+        peerDependencies:
+            react: ">=16"
+        dependencies:
+            prismjs: 1.29.0
+            react: 18.3.1
         dev: false
 
     /react@18.3.1:
@@ -3877,6 +3929,15 @@ packages:
         dependencies:
             punycode: 2.3.1
         dev: true
+
+    /util@0.10.4:
+        resolution:
+            {
+                integrity: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==,
+            }
+        dependencies:
+            inherits: 2.0.3
+        dev: false
 
     /vite@5.4.3(@types/node@22.5.4):
         resolution:

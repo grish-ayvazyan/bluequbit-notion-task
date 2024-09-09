@@ -1,0 +1,15 @@
+.notion {
+    color: rgba(255, 255, 255, 0.81);
+}
+.notion-callout,
+.notion-code {
+    background-color: rgb(37, 37, 37);
+}
+
+.content-center {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+}
