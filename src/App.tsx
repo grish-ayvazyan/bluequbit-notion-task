@@ -31,8 +31,8 @@ function App() {
 
     if (!data) return <NoData />;
 
-    //TODO: Try to fix the ts-expect-error regarding the customBlockComponents prop
-    // @ts-expect-error - The customBlockComponents prop is not recognized by the NotionRenderer component
+    // TODO: Resolve the TypeScript issue regarding the customBlockComponents prop
+    // @ts-expect-error - The NotionRenderer does not support toggling heading components and  customBlockComponents prop does not include a 'header' key
     return <NotionRenderer customBlockComponents={customBlockComponents} blockMap={data} fullPage />;
 }
 
