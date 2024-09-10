@@ -1,0 +1,40 @@
+.notion-header {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.notion-header-1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.notion-header-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.notion-toggle summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.notion-toggle div {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.notion-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.notion-table th,
+.notion-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+.notion-table th {
+    background-color: #f4f4f4;
+}

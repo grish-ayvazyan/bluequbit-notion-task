@@ -1,6 +1,7 @@
 import { BlockMapType, NotionRenderer } from "react-notion";
 import "react-notion/src/styles.css";
 
+import { CustomEquationBlock, CustomHeadingBlock, CustomTableBlock } from "@/components/CustomBlocks";
 import Loading from "@/components/Loading";
 import NoData from "@/components/NoData";
 import useFetch from "@/hooks/useFetch";
@@ -17,6 +18,12 @@ const pageId = import.meta.env.VITE_NOTION_PAGE_ID;
 
 const fullUrl = `${BASE_URL}/${pageId}`;
 
+const customBlockComponents = {
+    equation: CustomEquationBlock,
+    header: CustomHeadingBlock,
+    table: CustomTableBlock,
+};
+
 function App() {
     const { data, isLoading } = useFetch<BlockMapType>(fullUrl);
 
@@ -24,7 +31,9 @@ function App() {
 
     if (!data) return <NoData />;
 
-    return <NotionRenderer blockMap={data} fullPage />;
+    //TODO: Try to fix the ts-expect-error regarding the customBlockComponents prop
+    // @ts-expect-error - The customBlockComponents prop is not recognized by the NotionRenderer component
+    return <NotionRenderer customBlockComponents={customBlockComponents} blockMap={data} fullPage />;
 }
 
 export default App;

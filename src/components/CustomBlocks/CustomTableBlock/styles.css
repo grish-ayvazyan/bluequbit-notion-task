@@ -1,0 +1,20 @@
+.notion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.notion-table th,
+.notion-table td {
+    padding: 7px 9px;
+    border: 1px solid rgb(47, 47, 47);
+    text-align: left;
+}
+
+.notion-table tbody tr:first-child {
+    background-color: #253c30;
+}
+
+.notion-table th {
+    font-weight: bold;
+}
