@@ -49,3 +49,9 @@ export type TitleBlockProps = {
         };
     };
 };
+
+export type TableOfContentsEntry = {
+    id: string;
+    text: string;
+    indentLevel: number;
+};

@@ -1,0 +1,37 @@
+.notion-table-of-contents {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.notion-table-of-contents-item {
+    display: block;
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+    margin-bottom: 4px;
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+.notion-table-of-contents-item-body {
+    display: inline-block;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.notion-table-of-contents-item:hover {
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.notion-table-of-contents-item[data-indent-level="0"] .notion-table-of-contents-item-body {
+    margin-left: 0;
+}
+
+.notion-table-of-contents-item[data-indent-level="1"] .notion-table-of-contents-item-body {
+    margin-left: 24px;
+}
+
+.notion-table-of-contents-item[data-indent-level="2"] .notion-table-of-contents-item-body {
+    margin-left: 48px;
+}

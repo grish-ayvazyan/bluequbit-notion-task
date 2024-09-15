@@ -13,15 +13,26 @@ const renderChildText = (textArray: DecorationType[]) => {
 const CustomHeadingBlock = ({ blockValue: block, blockMap }: BlockProps) => {
     const blockValue = blockMap[block.id]?.value || {};
 
-    const isToggle = blockValue.type === "header" && blockValue.content && blockValue.content.length > 0;
-    const headerLevel = blockValue.type === "header" ? 1 : 2;
+    // Determine header level and type
+    const headerLevel =
+        blockValue.type === "header"
+            ? 1
+            : blockValue.type === "sub_header"
+              ? 2
+              : blockValue.type === "sub_sub_header"
+                ? 3
+                : 0; // Default level if not recognized
 
-    const HeadingTag = blockValue.type === "header" ? "h1" : "h2";
+    const HeadingTag = headerLevel === 1 ? "h1" : headerLevel === 2 ? "h2" : headerLevel === 3 ? "h3" : "div";
+
+    const isToggle = blockValue.type === "header" && blockValue.content && blockValue.content.length > 0;
+
+    const id = block.id;
 
     if (isToggle) {
         return (
             <details className="notion-toggle">
-                <summary className={`notion-header notion-header-${headerLevel}`}>
+                <summary className={`notion-header notion-header-${headerLevel}`} id={id}>
                     {blockValue.properties && renderChildText(blockValue.properties.title)}
                 </summary>
                 <div>
@@ -37,7 +48,7 @@ const CustomHeadingBlock = ({ blockValue: block, blockMap }: BlockProps) => {
         );
     } else {
         return (
-            <HeadingTag className={`notion-header notion-header-${headerLevel}`}>
+            <HeadingTag className={`notion-header notion-header-${headerLevel}`} id={id}>
                 {renderChildText(blockValue.properties.title)}
             </HeadingTag>
         );

@@ -1,7 +1,12 @@
 import { BlockMapType, NotionRenderer } from "react-notion";
 import "react-notion/src/styles.css";
 
-import { CustomEquationBlock, CustomHeadingBlock, CustomTableBlock } from "@/components/CustomBlocks";
+import {
+    CustomEquationBlock,
+    CustomHeadingBlock,
+    CustomTableBlock,
+    CustomTableOfContents,
+} from "@/components/CustomBlocks";
 import Loading from "@/components/Loading";
 import NoData from "@/components/NoData";
 import useFetch from "@/hooks/useFetch";
@@ -21,7 +26,10 @@ const fullUrl = `${BASE_URL}/${pageId}`;
 const customBlockComponents = {
     equation: CustomEquationBlock,
     header: CustomHeadingBlock,
+    sub_header: CustomHeadingBlock,
+    sub_sub_header: CustomHeadingBlock,
     table: CustomTableBlock,
+    table_of_contents: CustomTableOfContents,
 };
 
 function App() {
